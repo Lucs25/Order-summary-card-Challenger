@@ -21,18 +21,13 @@
 
 body {
   background: var(--primary-color);
-  border: 1px solid black;
-  border-radius: 16px;
 }
 
 main {
-  max-width: 90%;
+  width: 350px;
   border-radius: 16px;
   font-family: var(--ff);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 5px auto;
   background: var(--neutral-primary-color);
 }
 
@@ -48,38 +43,40 @@ img {
 h1 {
   font-size: 1.5rem;
   font-weight: var(--fw-900);
-  margin: 20px 0;
+  margin: 20px;
   color: var(--neutral-third-color);
+  text-align: center;
 }
 
 h1 + p {
-  max-width: 78%;
-  text-align: center;
   line-height: 1.5;
+  text-align: center;
+  margin: 0 40px;
   font-size: var(--fs);
   color: var(--neutral-secondary-color);
 }
 
 .container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 20px;
-  width: 78%;
-  border-radius: 16px;
-  background: var(--neutral-primary-color);
+  margin: 20px auto;
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
   font-size: 0.875rem;
+  background: var(--neutral-primary-color);
 }
 
 .container p:nth-child(2) {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  width: 100%;
+  margin-left: 10px;
   font-size: 0.875rem;
   font-weight: 900;
   line-height: 1.5;
   color: var(--neutral-third-color);
-  margin: 10px 20px 10px 20px;
 }
 .container p:nth-child(2) span {
   font-weight: 500;
@@ -91,26 +88,50 @@ h1 + p {
   text-decoration: underline;
   color: var(--secondary-color);
   font-weight: 700;
-  margin-left: 50px;
+  cursor: pointer;
+}
+
+.container p:nth-child(3):hover {
+  color: hsl(245, 50%, 50%);
+  transition: 0.1s;
 }
 
 button {
   border: none;
   margin-bottom: 15px;
   max-width: 100%;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 .payment {
+  display: block;
   border-radius: 16px;
-  width: 78%;
-  padding: 15px 0;
-
+  margin: 10px 40px;
+  width: 80%;
+  padding: 15px;
+  text-align: center;
   border-radius: 8px;
   background: var(--secondary-color);
+  color: #fff;
 }
 
-/* .cancel {
-} */
+.payment:hover {
+  background: hsl(245, 50%, 50%);
+  transition: 0.1s;
+}
+
+.cancel {
+  color: var(--neutral-secondary-color);
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+
+.cancel:hover {
+  color: var(--neutral-third-color);
+  transition: 0.1s;
+}
 
 .attribution {
   font-size: 11px;
